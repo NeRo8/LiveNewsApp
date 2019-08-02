@@ -5,6 +5,7 @@ import colors from '../../constants/colors';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.SILVER_TRANSPARENT
+    backgroundColor: colors.SILVER_TRANSPARENT,
+    paddingHorizontal: 10
   }
 });

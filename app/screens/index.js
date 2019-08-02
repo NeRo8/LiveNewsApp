@@ -10,7 +10,7 @@ const MainNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      title: 'Home',
+      title: 'Free News',
       headerStyle: {
         backgroundColor: colors.TEAL
       },

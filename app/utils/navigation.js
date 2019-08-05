@@ -1,9 +1,9 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import HomeScreen from './HomeScreen';
-import DetailScreen from './DetailScreen';
-import AboutScreen from './AboutScreen';
-import SourcesScreen from './SourcesScreen';
+import HomeScreen from '../screens/HomeScreen';
+import DetailScreen from '../screens/DetailScreen';
+import AboutScreen from '../screens/AboutScreen';
+import SourcesScreen from '../screens/SourcesScreen';
 
 import colors from '../constants/colors';
 
@@ -36,6 +36,6 @@ const MainNavigator = createStackNavigator(
   }
 );
 
-const App = createAppContainer(MainNavigator);
+const Navigation = createAppContainer(MainNavigator);
 
-export default App;
+export default Navigation;

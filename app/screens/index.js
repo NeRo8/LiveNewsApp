@@ -3,28 +3,25 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
 import AboutScreen from './AboutScreen';
+import SourcesScreen from './SourcesScreen';
 
 import colors from '../constants/colors';
 
-const MainNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: {
-      title: 'Free News',
-      headerStyle: {
-        backgroundColor: colors.TEAL
-      },
-      headerTitleStyle: {
-        fontFamily: 'vincHand',
-        fontSize: 37,
-        color: '#fff'
-      },
-      headerBackTitle: 'Back'
-    }
+const MainNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        headerBackTitle: 'Back'
+      }
+    },
+    Detail: { screen: DetailScreen },
+    About: { screen: AboutScreen },
+    Sources: { screen: SourcesScreen }
   },
-  Detail: {
-    screen: DetailScreen,
-    navigationOptions: {
+  {
+    initialRouteName: 'Sources',
+    defaultNavigationOptions: {
       title: 'Free News',
       headerStyle: {
         backgroundColor: colors.TEAL
@@ -36,9 +33,8 @@ const MainNavigator = createStackNavigator({
       },
       headerTintColor: '#fff'
     }
-  },
-  About: { screen: AboutScreen }
-});
+  }
+);
 
 const App = createAppContainer(MainNavigator);
 

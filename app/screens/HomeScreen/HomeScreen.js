@@ -3,7 +3,7 @@ import { FlatList, View, ActivityIndicator } from 'react-native';
 
 import Article from '../../components/Article';
 
-import { getBusinnesNewsFromApi } from '../../api/News';
+import { getBusinnesNewsFromApi, getAllNewsSource } from '../../api/News';
 
 import styles from './styles';
 
